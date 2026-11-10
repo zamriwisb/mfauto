@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Penyelenggaraan enjin | MF Auto Expert</title>
+  <meta name="description" content="Penyelenggaraan enjin di PETRONAS AutoExpert Pengkalan Chepa, Kota Bharu. Servis berkala, scan ECU, baiki enjin dan gearbox ATF/CVT.">
+  <link rel="icon" href="../assets/img/logo-mf.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="g-oil" viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+    <symbol id="g-scan" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/><path d="M10 10h4v4h-4z"/></symbol>
+    <symbol id="g-engine" viewBox="0 0 24 24"><path d="M4 10h2V8h3V6h6v2h2l2 2h1V8h1.5v8H20v-2h-1v3h-3l-2 2H9l-3-3H4Z"/><path d="M2 11v5"/></symbol>
+    <symbol id="g-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></symbol>
+    <symbol id="g-wrench" viewBox="0 0 24 24"><path d="M14.5 3.5a5 5 0 0 0-4.6 6.9L3.5 16.8l3.7 3.7 6.4-6.4A5 5 0 0 0 20.5 9.5l-3 3-3.2-.8-.8-3.2 3-3a5 5 0 0 0-2-.5Z"/></symbol>
+    <symbol id="g-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/></symbol>
+    <symbol id="g-balance" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M5 7h14M5 7l-3 6.5a3 3 0 0 0 6 0L5 7M19 7l-3 6.5a3 3 0 0 0 6 0L19 7"/></symbol>
+    <symbol id="g-tyre" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 9.6v.01M14.4 12v.01M12 14.4v.01M9.6 12v.01"/></symbol>
+    <symbol id="g-patch" viewBox="0 0 24 24"><rect x="2.5" y="8" width="19" height="8" rx="4" transform="rotate(-45 12 12)"/><path d="M10.6 10.6v.01M13.4 13.4v.01M13.4 10.6v.01M10.6 13.4v.01"/></symbol>
+    <symbol id="g-spring" viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M7 5h10M7 19h10"/><path d="M8 7.5l8 2-8 2 8 2-8 2 8 1.5"/></symbol>
+    <symbol id="g-snow" viewBox="0 0 24 24"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7"/><path d="m9 3.5 3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></symbol>
+    <symbol id="g-brake" viewBox="0 0 24 24"><circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="2.5"/><path d="M14.5 2.8a10.5 10.5 0 0 1 6.7 6.7"/></symbol>
+    <symbol id="g-temp" viewBox="0 0 24 24"><path d="M10 4a2 2 0 1 1 4 0v10.3a4 4 0 1 1-4 0Z"/><path d="M12 10v7M17 6h3M17 9.5h3"/></symbol>
+    <symbol id="g-battery" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M6 7V4.5h3V7M15 7V4.5h3V7M5.5 13.5h4M16 11.5v4M14 13.5h4"/></symbol>
+    <symbol id="g-road" viewBox="0 0 24 24"><path d="M5 21 9 3M19 21 15 3M12 5v2.5M12 11v2.5M12 17v3"/></symbol>
+    <symbol id="g-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19Z"/><path d="M12 10v4.5M12 17.2v.01"/></symbol>
+    <symbol id="g-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="g-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></symbol>
+    <symbol id="g-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4M7 8h6M7 11h10"/></symbol>
+    <symbol id="g-clip" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="1"/><path d="M9 4V2.5h6V4M8.5 11.5l2 2 4-4M8.5 17h7"/></symbol>
+    <symbol id="g-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="g-family" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v11h14V9"/><path d="M12 17.5s-3.5-2-3.5-4.3a1.8 1.8 0 0 1 3.5-.7 1.8 1.8 0 0 1 3.5.7c0 2.3-3.5 4.3-3.5 4.3Z"/></symbol>
+    <symbol id="g-medal" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-2 8 5.5-3 5.5 3-2-8"/><path d="m12 6.5.9 1.8 2 .3-1.4 1.4.3 2-1.8-1-1.8 1 .3-2-1.4-1.4 2-.3Z"/></symbol>
+    <symbol id="g-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1-4.4-4.3 6.1-.9Z"/></symbol>
+    <symbol id="g-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+    <symbol id="g-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="g-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="g-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8Z"/><path d="M7.5 7.5v.01"/></symbol>
+    <symbol id="g-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.2 2.8 2.8L16.5 9"/></symbol>
+  </svg>
+
+  <a class="skip" href="#utama">Langkau ke kandungan</a>
+
+  <!-- SVG sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="2" x="3" y="5" width="18" height="14" rx="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="2" x="3.5" y="3.5" width="17" height="17" rx="5"/><circle fill="none" stroke="currentColor" stroke-width="2" cx="12" cy="12" r="4"/><circle fill="currentColor" cx="17.2" cy="6.8" r="1.2"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3c.3 2.3 1.7 3.8 4 4v3.1c-1.5.1-2.9-.4-4-1.2v6.2a5.9 5.9 0 1 1-5.9-5.9h.6v3.2a2.7 2.7 0 1 0 2.1 2.7V3h3.2Z"/></symbol>
+    <symbol id="i-nav" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 11 21 3l-8 18-2-8-8-2Z"/></symbol>
+  </svg>
+
+  <!-- 1–2. Header: single light bar. Logos left, pill nav centre, WhatsApp right.
+       Fixed; turns translucent with blur and shrinks once the page scrolls. -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="MF Auto Expert, ke laman utama">
+        <img class="brand__mf" src="../assets/img/logo-mf-trim.png" alt="MF Auto Expert Sdn Bhd" width="280" height="275">
+        <span class="brand__rule" aria-hidden="true"></span>
+        <img class="brand__partner" src="../assets/img/logo-petronas-autoexpert.png" alt="PETRONAS AutoExpert Pengkalan Chepa" width="500" height="218">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Menu utama">
+        <a href="index.html">Utama</a>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <div class="nav__group">
+          <a class="nav__parent is-active" href="index.html#servis">Servis <svg class="nav__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="nav__menu">
+            <a href="servis-penyelenggaraan-enjin.html" class="is-active" aria-current="page">Penyelenggaraan enjin</a>
+            <a href="servis-tayar-sistem-bawah.html">Tayar &amp; sistem bawah</a>
+            <a href="servis-khas.html">Servis khas</a>
+          </div>
+        </div>
+        <a href="index.html#pencapaian">Pencapaian</a>
+        <a href="hubungi.html">Hubungi</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header__wa" href="https://wa.me/60179837220?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20servis%20kereta." target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="ico-wa"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>
+          <span>WhatsApp kami</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menuSheet" aria-label="Buka menu">
+          <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu: full-width light sheet that slides down under the bar -->
+    <div class="sheet" id="menuSheet">
+      <nav class="sheet__nav" aria-label="Menu mudah alih">
+        <a href="index.html">Utama</a>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <a href="index.html#servis">Servis</a>
+        <a class="sheet__sub is-active" href="servis-penyelenggaraan-enjin.html">Penyelenggaraan enjin</a>
+        <a class="sheet__sub" href="servis-tayar-sistem-bawah.html">Tayar &amp; sistem bawah</a>
+        <a class="sheet__sub" href="servis-khas.html">Servis khas</a>
+        <a href="index.html#pencapaian">Pencapaian</a>
+        <a href="hubungi.html">Hubungi</a>
+      </nav>
+      <div class="sheet__actions">
+        <a class="btn btn--wa btn--pill" href="https://wa.me/60179837220?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20servis%20kereta." target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" class="ico-wa"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama" class="page page--servis page--enjin">
+
+    <!-- Page hero: text on paper, photo bleeds to the right edge -->
+    <section class="ed-hero ed-hero--plain" aria-labelledby="page-title">
+      <div class="ed-hero__text">
+        <nav class="crumbs" aria-label="Laluan"><a href="index.html">Utama</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="index.html#servis">Servis</a><span class="crumbs__sep" aria-hidden="true">/</span><span aria-current="page">Penyelenggaraan enjin</span></nav>
+        <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>Servis</p>
+        <h1 class="h1" id="page-title">Servis berkala, enjin &amp; transmisi</h1>
+        <p class="ed-hero__lead">Servis berkala minor dan major dengan minyak pelincir PETRONAS Syntium, scan enjin berkomputer, baiki enjin dan servis gearbox ATF/CVT. Bengkel pakar kereta Jepun dan Malaysia.</p>
+        <div class="ed-hero__actions">
+          <a class="btn btn--wa" href="https://wa.me/60179837220?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20servis%20penyelenggaraan%20enjin." target="_blank" rel="noopener"><svg class="ico-wa" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Tanya harga</a>
+            <a class="btn btn--line" href="hubungi.html?servis=enjin"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-clip"/></svg> Tempah slot servis</a>
+        </div>
+      </div>
+      <figure class="ed-hero__media">
+        <img src="../assets/img/photo-minyak-enjin.jpg" width="900" height="856" alt="Minyak enjin PETRONAS dituang ke dalam enjin" fetchpriority="high">
+      </figure>
+    </section>
+    <section class="section" aria-labelledby="buat-title">
+      <div class="container">
+        <div class="ed-intro">
+          <header class="section__head">
+          <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>Apa yang kami buat</p>
+          <h2 class="h2" id="buat-title">Termasuk dalam servis ini</h2>
+        </header>
+          <p class="ed-intro__lead">Harga bergantung pada model kereta dan keadaannya. Anda menerima sebut harga sebelum kerja dimulakan.</p>
+        </div>
+        <ol class="ed-rows">
+          <li class="ed-row">
+            <span class="ed-row__no">01</span>
+            <h3 class="h3">Servis berkala (minor / major)</h3>
+            <p>Pelbagai pilihan minyak pelincir PETRONAS Syntium mengikut kesesuaian kereta anda, lengkap dengan pemeriksaan 41 titik keselamatan.</p>
+            <span class="ed-row__icon"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-oil"/></svg></span>
+          </li>
+          <li class="ed-row">
+            <span class="ed-row__no">02</span>
+            <h3 class="h3">Tukar minyak pelincir enjin</h3>
+            <p>Minyak pelincir PETRONAS tulen membantu melindungi enjin daripada haus dan memanjangkan jangka hayatnya.</p>
+            <span class="ed-row__icon"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-oil"/></svg></span>
+          </li>
+          <li class="ed-row">
+            <span class="ed-row__no">03</span>
+            <h3 class="h3">Scan enjin berkomputer (ECU)</h3>
+            <p>Alat imbasan membaca kod ralat daripada ECU kereta, supaya punca lampu amaran atau masalah enjin dikenal pasti, bukan diteka.</p>
+            <span class="ed-row__icon"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-scan"/></svg></span>
+          </li>
+          <li class="ed-row">
+            <span class="ed-row__no">04</span>
+            <h3 class="h3">Baiki &amp; tukar ganti enjin</h3>
+            <p>Daripada kebocoran gasket penutup injap (valve cover) hingga komponen enjin yang haus, bahagian yang rosak dibaiki atau ditukar ganti.</p>
+            <span class="ed-row__icon"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-wrench"/></svg></span>
+          </li>
+          <li class="ed-row">
+            <span class="ed-row__no">05</span>
+            <h3 class="h3">Servis gear &amp; transmisi (ATF/CVT)</h3>
+            <p>Penjagaan kotak gear automatik ATF dan CVT, termasuk tukar minyak transmisi, untuk pertukaran gear yang lancar.</p>
+            <span class="ed-row__icon"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-gear"/></svg></span>
+          </li>
+          <li class="ed-row">
+            <span class="ed-row__no">06</span>
+            <h3 class="h3">Overhaul kotak transmisi</h3>
+            <p>Bagi gearbox yang bermasalah, kotak transmisi dibuka, diperiksa dan dibaik pulih.</p>
+            <span class="ed-row__icon"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-gear"/></svg></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section section--tint" aria-label="Diagnostik lengkap">
+      <div class="container split">
+        <div class="split__head">
+          <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>Diagnostik lengkap</p>
+          <h2 class="h2">Pemeriksaan 41 titik keselamatan</h2>
+          <p>Setiap kereta diperiksa satu per satu supaya masalah dikesan sebelum menjadi kerosakan teruk. Anda menerima laporan pemeriksaan lengkap.</p>
+        </div>
+        <ul class="signs signs--ok">
+            <li><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-check"/></svg><span>Kereta diperiksa satu per satu, masalah dikesan sebelum rosak teruk</span></li>
+            <li><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-check"/></svg><span>Produk PETRONAS original dan alat ganti tulen</span></li>
+            <li><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-check"/></svg><span>Mekanik berpengalaman, kerja dibuat ikut standard</span></li>
+            <li><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-check"/></svg><span>Diagnosis telus: anda faham apa yang anda bayar</span></li>
+            <li><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#g-check"/></svg><span>Ruang menunggu selesa dengan aircond dan sofa</span></li>
+        </ul>
+      </div>
+    </section>
+    <!-- Client banner(s): full bleed, shown whole -->
+    <section class="ed-banners" aria-label="Promosi">
+        <figure class="promo">
+          <picture>
+            <source media="(max-width: 700px)" srcset="../assets/img/banner-website-servis-me-klate-m.jpg">
+            <img src="../assets/img/banner-website-servis-me-klate.jpg" width="1920" height="845" alt="Kembalikan prestasi enjin seperti baru. Servis minyak enjin cepat." loading="lazy">
+          </picture>
+        </figure>
+    </section>
+    <section class="section section--tint" aria-labelledby="tanda-title">
+      <div class="container split">
+        <div class="split__head">
+          <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>Bila perlu datang</p>
+          <h2 class="h2" id="tanda-title">Tanda kereta anda perlukan servis ini</h2>
+          <p>Jika anda perasan salah satu tanda ini, bawa kereta anda untuk diperiksa.</p>
+          <p class="note">Panduan umum sahaja. Juruteknik kami akan sahkan punca sebenar selepas pemeriksaan.</p>
+        </div>
+        <ol class="ed-signs">
+            <li><span class="ed-sign__no">01</span><span>Lampu amaran enjin (check engine) menyala di papan pemuka</span></li>
+            <li><span class="ed-sign__no">02</span><span>Enjin bergetar, tersentak atau terasa kurang kuasa</span></li>
+            <li><span class="ed-sign__no">03</span><span>Sudah sampai jarak atau tempoh untuk servis berkala</span></li>
+            <li><span class="ed-sign__no">04</span><span>Gear lambat masuk, tersentak atau tergelincir</span></li>
+            <li><span class="ed-sign__no">05</span><span>Minyak enjin bocor, atau ada bunyi pelik dari bahagian enjin</span></li>
+        </ol>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="proses-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>Cara kami bekerja</p>
+          <h2 class="h2" id="proses-title">Telus dari mula hingga siap</h2>
+        </header>
+        <ol class="ed-timeline">
+          <li class="ed-step"><span class="ed-step__num">01</span><h3 class="h3">Tempah slot</h3><p>WhatsApp atau telefon 017-983 7220 untuk bertanya harga atau tempah slot servis.</p></li>
+          <li class="ed-step"><span class="ed-step__num">02</span><h3 class="h3">Diagnostik</h3><p>Juruteknik membuat pemeriksaan 41 titik keselamatan dan menyediakan laporan lengkap.</p></li>
+          <li class="ed-step"><span class="ed-step__num">03</span><h3 class="h3">Sebut harga dahulu</h3><p>Anda menerima sebut harga sebelum kerja dimulakan. Tiada caj tersembunyi.</p></li>
+          <li class="ed-step"><span class="ed-step__num">04</span><h3 class="h3">Siap &amp; direkod</h3><p>Kerja disiapkan dan direkod secara digital. Boleh bayar melalui Setel.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="section section--tint" aria-labelledby="faq-title">
+      <div class="container split">
+        <div class="split__head">
+          <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>Soalan lazim</p>
+          <h2 class="h2" id="faq-title">Soalan yang selalu ditanya</h2>
+          <p>Ada soalan lain? WhatsApp kami di 017-983 7220.</p>
+        </div>
+        <div class="faq">
+          <details class="faq__item" open>
+            <summary><span class="faq__no">01</span><span class="faq__q">Adakah harga servis di sini jauh lebih mahal berbanding bengkel biasa?</span><svg class="faq__plus" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Tidak. MF Auto mengamalkan harga bengkel komuniti. Walaupun kami menggunakan peralatan digital standard PETRONAS AutoExpert, harga kami kompetitif dan telus. Anda akan menerima sebut harga rasmi sebelum sebarang kerja dimulakan, tanpa caj tersembunyi.</p>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__no">02</span><span class="faq__q">Adakah alat ganti dan minyak pelincir yang digunakan dijamin tulen?</span><svg class="faq__plus" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>100% tulen. Sebagai rangkaian PETRONAS AutoExpert, kami hanya menggunakan minyak pelincir PETRONAS Syntium dan alat ganti yang diiktiraf, untuk jangka hayat enjin yang lebih lama dan prestasi kenderaan yang optimum.</p>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__no">03</span><span class="faq__q">Boleh saya bayar guna Setel, dan adakah rekod servis saya disimpan?</span><svg class="faq__plus" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Boleh. Kami rakan bengkel rasmi Setel, dan setiap transaksi melayakkan anda mendapat mata ganjaran Mesra. Sejarah penyelenggaraan kereta anda juga disimpan secara digital dalam sistem kami, untuk rujukan servis akan datang atau nilai jualan semula kereta.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="ed-review" aria-labelledby="ulasan-title">
+      <div class="container reviews__inner">
+        <div class="reviews__intro">
+          <p class="eyebrow"><span class="eyebrow__mark" aria-hidden="true"></span>Ulasan</p>
+          <h2 class="h2" id="ulasan-title">Kata pelanggan kami</h2>
+          <p>Ulasan sebenar daripada pelanggan kami.</p>
+          <a class="link-more" href="index.html#ulasan">Baca lagi ulasan <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="quote-card">
+          <span class="quote-card__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="review">
+            <div class="review__stars" aria-label="5 bintang">★★★★★</div>
+            <p>Pomen yang berkemahiran dan berpengalaman..saya buat servis tukar valve cover gasket dan seangkatan dengannya sebab ada bocor..alhamdlah smp sekarang tiada lagi bocor..</p>
+            <footer>Tuan Ahmad Shakur <span class="ed-review__src">· testimoni pelanggan</span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <section class="ed-cta" aria-labelledby="cta-title">
+      <div class="container ed-cta__inner">
+        <div>
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__mark" aria-hidden="true"></span>Tempah slot</p>
+          <h2 class="h2" id="cta-title">Kereta anda perlu diservis?</h2>
+          <p>WhatsApp kami untuk tanya harga atau tempah slot. Sabtu – Khamis, 9:00 pagi – 5:30 petang.</p>
+        </div>
+        <div class="ed-cta__side">
+          <a class="ed-cta__phone" href="tel:+60179837220">017-983 7220</a>
+          <a class="btn btn--white" href="https://wa.me/60179837220?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20servis%20kereta." target="_blank" rel="noopener"><svg class="ico-wa" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-wa"/></svg> WhatsApp kami</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. Footer: 4 columns (brand · hours · links · social), legal rows below -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__brand">
+        <div class="footer__logos">
+          <img src="../assets/img/logo-mf-trim.png" width="280" height="275" alt="MF Auto Expert Sdn Bhd" loading="lazy">
+          <img class="footer__partner" src="../assets/img/logo-petronas-autoexpert.png" width="500" height="218" alt="PETRONAS AutoExpert Pengkalan Chepa" loading="lazy">
+        </div>
+        <p><strong class="footer__name">MF Auto Expert Sdn Bhd</strong><br><span class="footer__reg">No. SSM: 202201041649 (1487346-K)</span></p>
+        <p>Lot 401, Kg Jejawi, Pengkalan Chepa,<br>16100 Kota Bharu,<br>Kelantan, Malaysia.</p>
+        <p class="footer__contact">
+          <span><strong>T:</strong> <a href="tel:+60179837220">017-983 7220</a></span>
+          <span><strong>E:</strong> <a href="mailto:mfautoexpertsb@gmail.com">mfautoexpertsb@gmail.com</a></span>
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__h">Waktu operasi</h2>
+        <p>Sabtu – Khamis<br>9:00 pagi – 5:30 petang</p>
+        <p><strong class="footer__sub">Jumaat</strong><br>Tutup</p>
+      </div>
+
+      <nav class="footer__col footer__links" aria-label="Pautan pantas">
+        <h2 class="footer__h">Pautan pantas</h2>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <a href="servis-penyelenggaraan-enjin.html">Penyelenggaraan enjin</a>
+        <a href="servis-tayar-sistem-bawah.html">Tayar &amp; sistem bawah</a>
+        <a href="servis-khas.html">Servis khas</a>
+        <a href="index.html#pencapaian">Pencapaian</a>
+        <a href="hubungi.html">Hubungi Kami</a>
+      </nav>
+
+      <div class="footer__col">
+        <h2 class="footer__h">Ikuti kami</h2>
+        <!-- TODO: pautan Facebook / Instagram / TikTok daripada klien -->
+        <div class="social">
+          <a href="#" aria-label="Facebook (pautan akan dikemas kini)"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a href="#" aria-label="Instagram (pautan akan dikemas kini)"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="#" aria-label="TikTok (pautan akan dikemas kini)"><svg aria-hidden="true"><use href="#i-tt"/></svg></a>
+          <a href="https://wa.me/60179837220?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20servis%20kereta." target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+        </div>
+        <h2 class="footer__h footer__h--gap">Navigasi</h2>
+        <div class="social">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=PETRONAS+AutoExpert+Pengkalan+Chepa" target="_blank" rel="noopener" aria-label="Google Maps"><svg aria-hidden="true"><use href="#i-pin"/></svg></a>
+          <a href="https://waze.com/ul?q=PETRONAS%20AutoExpert%20Pengkalan%20Chepa&amp;navigate=yes" target="_blank" rel="noopener" aria-label="Waze"><svg aria-hidden="true"><use href="#i-nav"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__base">
+      <p>© <span id="year">2026</span> MF Auto Expert Sdn Bhd. Hak cipta terpelihara.</p>
+      <p>Maklumat di laman ini disediakan oleh MF Auto Expert Sdn Bhd dan kami berusaha memastikannya sentiasa tepat dan terkini. Harga dan promosi tertakluk kepada perubahan; sila hubungi kami untuk sebut harga terkini sebelum servis. PETRONAS dan PETRONAS AutoExpert ialah tanda dagangan PETRONAS.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="https://wa.me/60179837220?text=Salam%2C%20saya%20ingin%20bertanya%20tentang%20servis%20kereta." target="_blank" rel="noopener" aria-label="WhatsApp kami">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>
+  </a>
+
+  <!-- Certificate viewer -->
+  <dialog class="viewer" id="viewer" aria-label="Paparan sijil">
+    <button class="viewer__close" aria-label="Tutup">×</button>
+    <img src="" alt="">
+  </dialog>
+  <script src="page.js"></script>
+</body>
+</html>

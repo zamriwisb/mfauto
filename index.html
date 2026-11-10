@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Senarai Pendek Homepage | MF Auto Expert</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/logo-mf.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #D71920; --red-dark: #A8121A; --teal: #00A19C; --teal-text: #00736F;
+      --ink: #1C1E22; --muted: #5E646C; --line: #E3E5E8; --mist: #F4F5F6; --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Poppins", system-ui, sans-serif; color: var(--ink); background: var(--mist); line-height: 1.55; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    .top { background: var(--white); border-bottom: 4px solid var(--red); position: sticky; top: 0; z-index: 10; }
+    .top .wrap { display: flex; align-items: center; gap: 16px; min-height: 76px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+    .brand img { height: 52px; width: auto; }
+    .brand strong { display: block; font-size: 18px; line-height: 1.2; }
+    .brand span { font-size: 13px; color: var(--muted); }
+    .link-all { font-size: 14px; font-weight: 600; text-decoration: none; padding: 9px 16px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--white); }
+    .link-all:hover { border-color: var(--red); color: var(--red); }
+
+    /* Intro */
+    .intro { padding: 44px 0 12px; }
+    .intro h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin: 0 0 10px; font-weight: 800; letter-spacing: -0.01em; }
+    .intro p { margin: 0; color: var(--muted); max-width: 64ch; }
+    .intro .count { display: inline-block; margin-bottom: 14px; padding: 4px 12px; border-radius: 999px; background: #FDECEC; color: var(--red-dark); font-weight: 600; font-size: 13px; }
+
+    /* Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; padding: 28px 0 64px; }
+    .card { background: var(--white); border-radius: 14px; overflow: hidden; border: 1px solid var(--line); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px -18px rgba(28,30,34,.35); }
+    .card.fav { border: 2px solid var(--teal); }
+
+    .shot { display: block; text-decoration: none; background: var(--mist); padding: 14px 14px 0; }
+    .browser { border-radius: 8px 8px 0 0; overflow: hidden; box-shadow: 0 6px 18px -10px rgba(0,0,0,.4); background: var(--white); }
+    .browser__bar { height: 22px; background: #E9EBEE; display: flex; align-items: center; gap: 5px; padding: 0 9px; }
+    .browser__bar i { width: 8px; height: 8px; border-radius: 50%; background: #C9CDD2; }
+    .browser img { aspect-ratio: 1440 / 900; object-fit: cover; object-position: top; width: 100%; height: auto; transition: transform .4s; }
+    .shot:hover .browser img { transform: scale(1.02); }
+
+    .body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+    .meta { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .vno { font-size: 13px; font-weight: 700; color: var(--teal-text); }
+    .tag { font-size: 11.5px; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: #E6F5F4; color: var(--teal-text); }
+    .tag--fav { background: #FDECEC; color: var(--red-dark); }
+    .card h2 { margin: 0 0 6px; font-size: 21px; line-height: 1.25; }
+    .card p { margin: 0 0 18px; color: var(--muted); font-size: 14.5px; flex: 1; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-weight: 600; font-size: 14px; padding: 10px 16px; border-radius: 999px; text-decoration: none; cursor: pointer; border: 1.5px solid transparent; }
+    .btn--red { background: var(--red); color: var(--white); }
+    .btn--red:hover { background: var(--red-dark); }
+    .btn--line { background: var(--white); border-color: var(--line); color: var(--ink); }
+    .btn--line:hover { border-color: var(--ink); }
+    .btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Phone preview dialog */
+    .phone { border: 0; padding: 0; background: transparent; overflow: visible; }
+    .phone::backdrop { background: rgba(28,30,34,.6); }
+    .phone__frame { width: 390px; max-width: 92vw; height: min(800px, 86vh); background: #111; border-radius: 36px; padding: 12px; box-shadow: 0 30px 60px rgba(0,0,0,.4); }
+    .phone__frame iframe { width: 100%; height: 100%; border: 0; border-radius: 26px; background: var(--white); }
+    .phone__head { display: flex; justify-content: space-between; align-items: center; color: var(--white); margin-bottom: 10px; gap: 12px; }
+    .phone__head strong { font-size: 15px; }
+    .phone__close { width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--white); color: var(--ink); font-size: 22px; cursor: pointer; }
+
+    /* Footer */
+    .foot { background: var(--white); border-top: 1px solid var(--line); }
+    .foot .wrap { display: flex; align-items: center; gap: 18px; padding-top: 28px; padding-bottom: 28px; flex-wrap: wrap; }
+    .foot img { height: 88px; width: auto; }
+    .foot p { margin: 0; font-size: 14px; color: var(--muted); }
+    .foot strong { color: var(--ink); }
+
+    @media (max-width: 560px) {
+      .wrap { padding: 0 16px; }
+      .grid { grid-template-columns: 1fr; gap: 20px; }
+      .brand span { display: none; }
+      .brand img { height: 44px; }
+      .link-all { padding: 8px 12px; font-size: 13px; }
+      .foot img { height: 72px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img src="assets/img/logo-mf.png" alt="MF Auto Expert Sdn Bhd" width="400" height="571">
+        <div><strong>MF Auto Expert</strong><span>Cadangan reka bentuk laman web</span></div>
+      </a>
+      
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <span class="count">2 versi dipilih</span>
+      <h1>Senarai pendek reka bentuk homepage</h1>
+      <p>Semua versi menggunakan kandungan, logo dan banner yang sama. Hanya susun atur dan gaya yang berbeza. Klik gambar untuk membuka versi penuh, atau pilih "Pratonton telefon" untuk melihat paparan mudah alih.</p>
+    </section>
+
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img src="assets/img/logo-mf.png" alt="MF Auto Expert Sdn Bhd" width="400" height="571">
+      <p><strong>MF Auto Expert Sdn Bhd</strong><br>Pengendali PETRONAS AutoExpert Pengkalan Chepa, Kota Bharu</p>
+    </div>
+  </footer>
+
+  <dialog class="phone" id="phone" aria-labelledby="phoneTitle">
+    <div class="phone__head">
+      <strong id="phoneTitle">Pratonton telefon</strong>
+      <button class="phone__close" type="button" aria-label="Tutup">×</button>
+    </div>
+    <div class="phone__frame"><iframe title="Pratonton telefon" src="about:blank"></iframe></div>
+  </dialog>
+
+  <script>
+    var versions = [
+      { v: "3b", href: "v3b/index.html", name: "Moden Autofiix Hijau", desc: "Versi 3 dengan hijau PETRONAS sebagai warna utama, logo MF + PETRONAS AutoExpert di header dan footer gaya 24b." },
+      { v: "24b", href: "v24b/index.html", name: "Jubin Imej Hijau", desc: "Versi 24 dengan hijau PETRONAS sebagai warna utama, fon Plus Jakarta Sans." }
+    ];
+
+    var grid = document.getElementById("grid");
+    grid.innerHTML = versions.map(function (x) {
+      var tags = (x.fav ? '<span class="tag tag--fav">Pilihan utama</span>' : '') + (x.tag ? '<span class="tag">' + x.tag + '</span>' : '');
+      return '<article class="card' + (x.fav ? ' fav' : '') + '">' +
+        '<a class="shot" href="' + x.href + '" target="_blank" rel="noopener" aria-label="Buka versi ' + x.v + ': ' + x.name + '">' +
+          '<div class="browser"><div class="browser__bar"><i></i><i></i><i></i></div>' +
+          '<img src="assets/shortlist/v' + x.v + '.jpg" alt="Paparan desktop versi ' + x.v + ', ' + x.name + '" width="900" height="563" loading="lazy"></div>' +
+        '</a>' +
+        '<div class="body">' +
+          '<div class="meta"><span class="vno">Versi ' + x.v + '</span>' + tags + '</div>' +
+          '<h2>' + x.name + '</h2>' +
+          '<p>' + x.desc + '</p>' +
+          '<div class="actions">' +
+            '<a class="btn btn--red" href="' + x.href + '" target="_blank" rel="noopener">Buka versi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>' +
+            '<button class="btn btn--line" type="button" data-phone="' + x.href + '" data-name="Versi ' + x.v + ': ' + x.name + '"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Pratonton telefon</button>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    }).join("");
+
+    var dlg = document.getElementById("phone");
+    var frame = dlg.querySelector("iframe");
+    var lastBtn = null;
+    grid.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-phone]");
+      if (!b) return;
+      if (typeof dlg.showModal !== "function") { window.open(b.dataset.phone, "_blank"); return; }
+      lastBtn = b;
+      document.getElementById("phoneTitle").textContent = b.dataset.name;
+      frame.src = b.dataset.phone;
+      dlg.showModal();
+    });
+    function closePhone() { dlg.close(); }
+    dlg.querySelector(".phone__close").addEventListener("click", closePhone);
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) closePhone(); });
+    dlg.addEventListener("close", function () { frame.src = "about:blank"; if (lastBtn) lastBtn.focus(); });
+  </script>
+</body>
+</html>
