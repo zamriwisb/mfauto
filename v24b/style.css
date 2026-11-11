@@ -490,3 +490,6 @@ h1, h2, h3, .stat__num { font-weight: 800; letter-spacing: -.02em; }
 .process .steps { margin: 0; padding: 0; list-style: none; }
 .about__text { align-items: start; }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) and (min-width: 901px) and (max-width: 1199px) { .svc__desc { display: none; } }
+
+/* Footer social icons: keep the icon white on hover (beats .footer__col a:hover) */
+.footer .social a:hover { color: var(--white); text-decoration: none; }
