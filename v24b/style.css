@@ -453,3 +453,9 @@ h1, h2, h3, .stat__num { font-weight: 800; letter-spacing: -.02em; }
 .viewer img { border-radius: 8px; }
 .btn, .nav .nav__wa-m { border-radius: 8px; }
 .checks li { border-radius: 0 0 8px 8px; }
+
+
+/* Contact tiles (front page): square photos cropped to 4:3, keep faces and signage clear of the chip */
+.tile img.tile__img--kaunter { object-position: 50% 22%; }
+.tile img.tile__img--bengkel { object-position: 50% 48%; }
+.tile img.tile__img--pejabat { object-position: 50% 30%; }
