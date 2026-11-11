@@ -466,3 +466,21 @@ a.ccard:hover { transform: translateY(-3px); box-shadow: var(--pg-shadow); }
 .nav .nav__wa-m:hover { background: var(--wa-dark); border-color: var(--wa-dark); }
 /* SSM number in the footer: readable, not faded */
 .footer__reg { display: inline-block; margin-top: 2px; font-size: .9rem; font-weight: 700; color: var(--ink-2); }
+
+/* ---------- Photos from the client (Nov 2026) ---------- */
+/* Rounded photo cards with a caption under the image */
+.tl-gallery { display: grid; gap: clamp(16px, 2vw, 24px); margin: 0; padding: 0; list-style: none; }
+.tl-gallery--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tl-gallery--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tl-gallery__card figure { margin: 0; height: 100%; background: var(--white); border-radius: var(--r-tile); overflow: hidden; box-shadow: var(--sh-tile); transition: transform .25s ease; }
+.tl-gallery__card:hover figure { transform: translateY(-4px); }
+.tl-gallery__card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.tl-gallery--3 .tl-gallery__card img { aspect-ratio: 1 / 1; }
+.tl-gallery__card figcaption { padding: 14px 18px 16px; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.4; }
+@media (max-width: 960px) { .tl-gallery--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+  .tl-gallery--3 { grid-template-columns: minmax(0, 1fr); }
+  .tl-gallery--3 .tl-gallery__card img { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 460px) { .tl-gallery--4 { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .tl-gallery__card figure { transition: none; } }
