@@ -671,3 +671,38 @@ h1, h2, h3, h4, .h2, .stat__num, .hero__count b, .quote-card__count b, .quote-ca
   .hero__dots .swiper-pagination-bullet { width: 6px; height: 6px; border-radius: 999px; background: rgba(255, 255, 255, .7); }
   .hero__dots .swiper-pagination-bullet-active { width: 18px; background: var(--white); }
 }
+
+/* ---------- Copywriting update (Nov 2026) ---------- */
+/* Intro under the banner: the page's H1, CTAs, and a caption for the active slide */
+.intro { background: var(--paper); padding: clamp(28px, 4vw, 48px) 0 var(--section-y); }
+.intro__inner { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: end; }
+.intro__title { font-size: clamp(32px, 4.6vw, 60px); font-weight: 800; font-stretch: 125%; letter-spacing: -0.035em; line-height: 1.02; overflow-wrap: break-word; color: var(--ink); }
+.intro__lead { margin: 20px 0 0; max-width: 58ch; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.6; color: var(--text); }
+.intro__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.slide-cap { display: none; padding: 26px 28px 28px; background: var(--white); border-left: 5px solid var(--mf-red); }
+.slide-cap.is-active { display: block; animation: capIn .45s ease; }
+.slide-cap__no { display: block; margin-bottom: 12px; font-family: var(--font-display); font-stretch: 125%; font-weight: 800; font-size: 14px; color: var(--muted); }
+.slide-cap__title { margin: 0 0 10px; font-family: var(--font-display); font-stretch: 125%; font-weight: 800; font-size: 22px; letter-spacing: -0.03em; line-height: 1.15; color: var(--ink); }
+.slide-cap p:not(.slide-cap__title) { margin: 0; color: var(--text); line-height: 1.55; }
+.slide-cap .link-more { margin-top: 16px; }
+@keyframes capIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide-cap.is-active { animation: none; } }
+@media (max-width: 960px) { .intro__inner { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) { .intro__actions .btn { flex: 1 1 100%; } }
+
+/* About: pull line is the brand message, not a quote */
+.about__text p + p { margin-top: 14px; }
+
+/* Why: intro paragraph and two-line benefit ticks */
+.why__intro { margin: -12px 0 24px; font-size: 18px; line-height: 1.6; color: var(--text); }
+.ticks li strong { display: block; font-weight: 800; color: var(--ink); }
+.ticks li span { display: block; margin-top: 2px; font-size: 15.5px; font-weight: 400; color: var(--text); }
+
+/* Stats: "Sejak" above the year, method note under the 90% figure */
+.stat__pre { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 700; font-stretch: 100%; letter-spacing: .04em; text-transform: uppercase; opacity: .9; }
+.stat__note { display: block; margin-top: 4px; font-size: 12px; font-weight: 400; opacity: .9; }
+
+/* Service cards: one short paragraph under the title */
+.svc__desc { margin: -6px 0 18px; font-size: 15.5px; line-height: 1.55; color: var(--text); }
+.process .ed-timeline { margin: 0; padding: 0; list-style: none; }
+@media (min-width: 1025px) and (max-width: 1180px) { .header__wa-x { display: none; } }

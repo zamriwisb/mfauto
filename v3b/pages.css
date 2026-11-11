@@ -547,3 +547,6 @@ a.ed-strip__item:hover { background: var(--paper); border-top-color: var(--green
   .ed-photos__item + .ed-photos__item { border-left: 0; border-top: 4px solid var(--white); }
 }
 @media (prefers-reduced-motion: reduce) { .ed-gallery img, .ed-photos img { transition: none; } }
+
+/* About: multi-paragraph intros */
+.section__head p + p, .split__head p + p { margin-top: 12px; }

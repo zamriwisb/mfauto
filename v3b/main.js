@@ -56,7 +56,13 @@
       pagination: { el: ".hero__dots", clickable: true },
       navigation: { prevEl: ".hero__prev", nextEl: ".hero__next" },
       a11y: { prevSlideMessage: "Banner sebelumnya", nextSlideMessage: "Banner seterusnya", paginationBulletMessage: "Ke banner {{index}}" },
-      on: { slideChange: function (s) { if (heroCount) heroCount.textContent = pad(s.realIndex + 1); } }
+      on: { slideChange: function (s) {
+        if (heroCount) heroCount.textContent = pad(s.realIndex + 1);
+        /* Intro caption follows the active banner */
+        document.querySelectorAll(".slide-cap").forEach(function (c) {
+          c.classList.toggle("is-active", c.getAttribute("data-slide") === String(s.realIndex));
+        });
+      } }
     });
 
     var reviewCount = document.querySelector(".quote-card__count b");

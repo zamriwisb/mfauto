@@ -484,3 +484,12 @@ a.ccard:hover { transform: translateY(-3px); box-shadow: var(--pg-shadow); }
 }
 @media (max-width: 460px) { .tl-gallery--4 { grid-template-columns: minmax(0, 1fr); } }
 @media (prefers-reduced-motion: reduce) { .tl-gallery__card figure { transition: none; } }
+
+/* Service pages: longer CTA labels may wrap on small phones */
+@media (max-width: 640px) { .cta-band__actions .btn, .tl-hero__actions .btn { white-space: normal; text-align: center; } }
+
+/* Centred lists: beat the "main.page ul { margin: 0 }" reset */
+main.page .tl-chips, main.page .tl-related { margin-left: auto; margin-right: auto; }
+
+/* About: multi-paragraph intros */
+.section__head p + p, .split__head p + p { margin-top: 12px; }

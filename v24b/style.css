@@ -459,3 +459,34 @@ h1, h2, h3, .stat__num { font-weight: 800; letter-spacing: -.02em; }
 .tile img.tile__img--kaunter { object-position: 50% 22%; }
 .tile img.tile__img--bengkel { object-position: 50% 48%; }
 .tile img.tile__img--pejabat { object-position: 50% 30%; }
+
+/* ---------- Copywriting update (Nov 2026) ---------- */
+/* Hero intro: the page's H1 under the slider, CTAs to the right */
+.hero__intro { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px clamp(32px, 5vw, 64px); align-items: end; margin-top: clamp(28px, 4vw, 44px); }
+.hero__title { font-size: clamp(1.85rem, 3.6vw, 2.8rem); line-height: 1.12; max-width: 22ch; }
+.hero__copy .lead { margin-top: 16px; max-width: 64ch; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 900px) { .hero__intro { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) { .hero__cta .btn { flex: 1 1 100%; } }
+
+/* About: three short paragraphs instead of one */
+.about__copy .lead + .lead { margin-top: 14px; }
+
+/* Benefit cards: heading + one line of support */
+.checks li strong { display: block; margin-bottom: 6px; font-size: 1rem; font-weight: 800; color: var(--ink); }
+.checks li span { display: block; font-weight: 400; color: var(--ink-2); }
+
+/* Stats: method note under the satisfaction figure */
+.stat__note { display: block; margin-top: 4px; font-size: .82rem; font-weight: 400; opacity: .9; }
+
+/* Service cards: one-line benefit under the title */
+.svc__desc { margin: -6px 0 12px; font-size: .9rem; line-height: 1.55; color: var(--ink-2); }
+
+/* Why choose us: Font Awesome icons in the feat circles */
+.why .feat__icon i { font-size: 22px; }
+.why .feat-grid { max-width: 1100px; margin: 0 auto; }
+.stat__pre { font-size: .42em; letter-spacing: 0; vertical-align: .55em; margin-right: .1em; }
+.faq-home { padding-top: 0; }
+.process .steps { margin: 0; padding: 0; list-style: none; }
+.about__text { align-items: start; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) and (min-width: 901px) and (max-width: 1199px) { .svc__desc { display: none; } }
